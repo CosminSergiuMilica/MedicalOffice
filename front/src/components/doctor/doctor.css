@@ -1,0 +1,101 @@
+.AppointmentDetails {
+  margin: auto;
+  margin-top: 20px;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.AppointmentDetails h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.AppointmentDetails p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.AppointmentDetails form {
+  margin-top: 20px;
+}
+
+.AppointmentDetails form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.AppointmentDetails form select,
+.AppointmentDetails form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.AppointmentDetails form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.AppointmentDetails form button:hover {
+  background-color: #0056b3;
+}
+.consultation-details-container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 40PX ;
+}
+
+.details-section {
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.doctor-details {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.doctor-details h2 {
+  color: #333;
+}
+
+.doctor-details p {
+  margin: 10px 0;
+}
+
+.doctor-details button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.doctor-details button:hover {
+  background-color: #0056b3;
+}
+
+
+

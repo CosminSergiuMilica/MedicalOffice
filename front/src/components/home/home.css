@@ -1,0 +1,34 @@
+.categories {
+    padding: 40;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.category-link {
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.category-link img {
+  border-radius: 10px; /* Adaugă colțuri rotunde */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adaugă umbrire ușoară */
+  transition: transform 0.3s ease-in-out; /* Adaugă o tranziție pentru animație */
+}
+
+.category-link:hover img {
+  transform: scale(1.1); /* Mărește imaginea la hover */
+}
+
+.category-link span {
+  display: block;
+  margin-top: 8px;
+}
+
+.second-header {
+  color: #333;
+  align-content: normal;
+}

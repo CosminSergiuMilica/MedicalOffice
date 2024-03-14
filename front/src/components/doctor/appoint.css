@@ -1,0 +1,41 @@
+.Appointments {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.Appointments h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Appointments ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Appointments li {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.Appointments p {
+  margin: 0;
+}
+
+.Appointments a {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.Appointments a:hover {
+  background-color: #0056b3;
+}

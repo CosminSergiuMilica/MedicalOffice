@@ -1,0 +1,84 @@
+syntax="proto3";
+
+service IDMService{
+    rpc Login(LoginRequest) returns (LoginResponse);
+    rpc VerifyToken(TokenRequest) returns (TokenResponse);
+    rpc SignUp(SignUpRequest) returns (SignUpResponse);
+    rpc CreateDoctor(CreateDoctorRequest) returns (CreateDoctorResponse);
+    rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+    rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
+    rpc GetSecret(SecretRequest) returns (SecretResponse);
+
+}
+
+message SecretRequest{
+    string username;
+}
+
+message SecretResponse{
+    string secret;
+}
+
+message CreateDoctorRequest{
+    string username=1;
+    string password=2;
+}
+
+message DeleteUserRequest{
+    string user_id=1;
+}
+
+message UpdateUserRequest{
+    string username=1;
+    string password=2;
+    string id_user=3;
+}
+
+message CreateDoctorResponse{
+    string message=1;
+    string id_user=2;
+    int32 code=3;
+}
+
+message DeleteUserResponse{
+    string message=1;
+    int32 code=2;
+}
+
+message UpdateUserResponse{
+    string id_user=1;
+    string message=2;
+    int32 code=3;
+}
+
+message LoginRequest{
+    string username = 1;
+    string password = 2;
+}
+
+message LoginResponse{
+    string access_token = 1;
+    string message = 2;
+    int32 code=3;
+}
+
+message TokenRequest{
+    string token = 1;
+}
+
+message TokenResponse{
+    string is_valid = 1;
+    string message = 2;
+}
+
+message SignUpRequest{
+    string username=1;
+    string password=2;
+}
+
+message SignUpResponse{
+    string access_token = 1;
+    string id_user=2;
+    string message = 3;
+    int32 code=4;
+}

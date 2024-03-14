@@ -1,0 +1,104 @@
+version: '3.8'
+services:
+  mariadb:
+    image: my-mariadb-image
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: pos-bd
+      MYSQL_USER: cosmin
+      MYSQL_PASSWORD: cosmin
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    networks:
+      - app-network
+  mysql-user:
+    image: maria-users
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: pos-bd
+      MYSQL_USER: cosmin
+      MYSQL_PASSWORD: cosmin
+    ports:
+      - "8006:3306"
+    volumes:
+      - user_data:/var/lib/mysql
+    networks:
+      - app-network
+  mongo-pos:
+    image: mongo-pos-image
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+
+  fastapi:
+    image: pos-fastapi
+    depends_on:
+      - mariadb
+    ports:
+      - "8000:8000"
+    networks:
+      - app-network
+
+  appointment-service:
+    image: appointment-service-image
+    depends_on:
+      - mariadb
+    ports:
+      - "8001:8000"
+    networks:
+      - app-network
+
+  doctor-service:
+    image: doctor-service-image
+    depends_on:
+      - mariadb
+    ports:
+      - "8002:8000"
+    networks:
+      - app-network
+
+  patient-service:
+    image: patient-service-image
+    depends_on:
+      - mariadb
+    ports:
+      - "8003:8000"
+    networks:
+      - app-network
+
+  consultation-service:
+    image: consultation-service-image
+    depends_on:
+      - mongo-pos
+    ports:
+      - "8004:8000"
+    networks:
+      - app-network
+
+  investigation-service:
+    image: investigation-service-image
+    depends_on:
+      - mongo-pos
+    ports:
+      - "8005:8000"
+    networks:
+      - app-network
+
+  users-service:
+    image: users_service_image
+    depends_on:
+      - mysql-user
+    ports:
+      - "50051:50051"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+
+volumes:
+  mariadb_data:
+  user_data:

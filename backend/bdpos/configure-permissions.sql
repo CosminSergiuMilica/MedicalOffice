@@ -1,0 +1,6 @@
+CREATE USER 'admin'@'%' IDENTIFIED BY 'admin_password';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'%' WITH GRANT OPTION;
+
+GRANT ALL PRIVILEGES ON `pos-bd`.* TO 'cosmin'@'%' WITH GRANT OPTION;
+REVOKE CREATE, DROP ON `pos-bd`.* FROM 'cosmin'@'%';
+FLUSH PRIVILEGES;

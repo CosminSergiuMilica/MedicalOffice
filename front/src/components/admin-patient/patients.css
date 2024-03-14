@@ -1,0 +1,29 @@
+
+.patients-list-container {
+  margin: 50px;
+  margin-top: 100px;
+}
+
+.patients-list-container h2 {
+  color: #1e70bf;
+}
+
+.patients-list li {
+  list-style-type: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.patient-info p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.patient-info p:last-child {
+  color: #1e70bf; 
+  font-weight: bold;
+}
+

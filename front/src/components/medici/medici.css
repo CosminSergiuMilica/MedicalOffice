@@ -1,0 +1,35 @@
+/* medici.css */
+
+.medici-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.medici-list {
+  list-style: none;
+  padding: 0;
+}
+
+.medic-item {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.medic-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.medic-name {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.medic-email,
+.medic-phone,
+.medic-specialization {
+  margin: 5px 0;
+}
